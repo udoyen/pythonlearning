@@ -1,0 +1,21 @@
+from sys import argv
+
+script, filename = argv
+
+print "We're going to read from %r." % filename
+print "If you wish to discontinue, hit CTRL-C (^C)."
+print "Otherwise hit the enter key."
+
+raw_input("?")
+
+print "Opening file..."
+target = open(filename)
+
+
+print "Reading file content..."
+txt = target.read()
+
+
+print """
+Here are the file contents: \n
+%r """ % txt
