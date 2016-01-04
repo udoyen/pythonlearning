@@ -8,7 +8,7 @@ def getHome():
     for i in range(0, 10):
         print ".",
     print "We are here"
-    shou("Welcome home")
+    shout("Welcome home")
 
 
 def noTrust():
@@ -52,8 +52,10 @@ def restRoom():
         rDoor()
     elif next.lower() == "blue":
         bDoor()
-    else:
+    elif next.lower() == "green":
         gDoor()
+    else:
+        restRoom()
 
 
 def iTrust():
@@ -66,7 +68,7 @@ def iTrust():
     print "rest room before we leave?"
 
     next = raw_input("> ")
-    if next.lower() == "y" or next.lower == "yes":
+    if next.lower() == "y" or next.lower() == "yes":
         restRoom()
     elif next.lower() == "n" or next.lower() == "no":
         print "I'll get you a cab"
@@ -75,7 +77,7 @@ def iTrust():
         cab()
     else:
         print "I don't know what that means"
-        shout("Good day sir")
+        findMyHome()
 
 
 def findMyHome():
