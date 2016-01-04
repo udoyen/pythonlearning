@@ -2,10 +2,11 @@
 
 # project program to emulate game play
 
+
 def getHome():
     print "We will be there in five minutes"
     for i in range(0, 10):
-         print ".",
+        print ".",
     print "We are here"
     shou("Welcome home")
 
@@ -14,8 +15,47 @@ def noTrust():
     print "Your smart, let me get you"
     print "a cab"
     cab()
-    
-    
+
+
+def rDoor():
+    print "Thanks for using the red door"
+    print "Red devils eat your soul"
+    shout("The game is over for you")
+
+
+def bDoor():
+    print "Thanks for using the blue door"
+    print "You fall into deep water"
+    print "And get eaten by sharks"
+    shout("The game is over for you")
+
+
+def gDoor():
+    print "Welcome to the warp portal"
+    print "You will now be sent home!"
+    getHome()
+
+
+def restRoom():
+    colDoor = ['red', 'blue', 'green']
+    print "In the rest room there are"
+    print "three doors to choose from",
+    for door in colDoor:
+        if colDoor.index(door) != 2:
+            print "%s," % door,
+        else:
+            print "and %s." % door
+    print "Please choose a door"
+    next = raw_input("> ")
+
+    if next.lower() == "red":
+        rDoor()
+    elif next.lower() == "blue":
+        bDoor()
+    else:
+        gDoor()
+
+
 def iTrust():
     print "Good you trust me"
     print "Now follow me!"
@@ -24,10 +64,10 @@ def iTrust():
     print "While I start the engine"
     print "Would you like to use the"
     print "rest room before we leave?"
-    
+
     next = raw_input("> ")
     if next.lower() == "y" or next.lower == "yes":
-        shout("You should never trust strangers like that")
+        restRoom()
     elif next.lower() == "n" or next.lower() == "no":
         print "I'll get you a cab"
         print "my car is broken"
@@ -36,8 +76,8 @@ def iTrust():
     else:
         print "I don't know what that means"
         shout("Good day sir")
-    
-    
+
+
 def findMyHome():
     """ function called by stranger function to get user
     home """
@@ -45,18 +85,17 @@ def findMyHome():
     print "Hmmm...."
     print "To help you, you need to trust me"
     print "Do you trust me?"
-    
+
     next = raw_input("> ")
-    
+
     if next.lower() == "y" or next.lower() == "yes":
         iTrust()
     elif next.lower() == "n" or next.lower() == "no":
         noTrust()
     else:
         print "Make up your mind, dude!"
-        
+
         findMyHome()
-        
 
 
 def sDirect():
@@ -70,10 +109,9 @@ def sDirect():
         print "Then you should be OK"
         print "Let me get you a cab"
         print "Here is the cab"
-        print "Will leave you"
+        print "Will leave you now"
         print "in the hands of the cab driver"
         cab()
-    
 
 
 def noCash():
@@ -85,7 +123,6 @@ def noCash():
         getHome()
     else:
         noCash()
-
 
 
 def polStationNoVisa():
@@ -102,6 +139,7 @@ def polStationNoVisa():
             shout("sorry we have to deport you")
     else:
         shout("Thank you for your honesty")
+
 
 def home():
     print "Let us get you a cab"
@@ -126,10 +164,9 @@ def polStation():
         shout("We are sorry we can't help you")
 
 
-
-
 def cab():
     """ cab driver function """
+    print "Welcom to our cab service"
     print "Do you have enough money"
     next = raw_input("> ")
     if next.lower() == "y" or next.lower() == "yes":
@@ -142,6 +179,7 @@ def cab():
             noCash()
     else:
         noCash()
+
 
 def pDirect():
     """ function for police direction """
@@ -167,9 +205,11 @@ def pDirect():
     else:
         polStationNoVisa()
 
+
 def shout(y):
     print y, "Good job!"
     exit(0)
+
 
 def start():
     print "You are at the airport"
