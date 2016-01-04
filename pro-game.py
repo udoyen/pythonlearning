@@ -9,7 +9,70 @@ def getHome():
     print "We are here"
     shou("Welcome home")
 
+
+def noTrust():
+    print "Your smart, let me get you"
+    print "a cab"
+    cab()
+    
+    
+def iTrust():
+    print "Good you trust me"
+    print "Now follow me!"
+    print "Lets get to my car"
+    print "Please put your belongins in the boot"
+    print "While I start the engine"
+    print "Would you like to use the"
+    print "rest room before we leave?"
+    
+    next = raw_input("> ")
+    if next.lower() == "y" or next.lower == "yes":
+        shout("You should never trust strangers like that")
+    elif next.lower() == "n" or next.lower() == "no":
+        print "I'll get you a cab"
+        print "my car is broken"
+        print "Here is your cab, have a nice day"
+        cab()
+    else:
+        print "I don't know what that means"
+        shout("Good day sir")
+    
+    
+def findMyHome():
+    """ function called by stranger function to get user
+    home """
+    print "Can I have the address your looking for!"
+    print "Hmmm...."
+    print "To help you, you need to trust me"
+    print "Do you trust me?"
+    
+    next = raw_input("> ")
+    
+    if next.lower() == "y" or next.lower() == "yes":
+        iTrust()
+    elif next.lower() == "n" or next.lower() == "no":
+        noTrust()
+    else:
+        print "Make up your mind, dude!"
+        
+        findMyHome()
+        
+
+
 def sDirect():
+    """ function for stranger branch """
+    print "How may I help you"
+    print "Are you lost"
+    next = raw_input("> ")
+    if next.lower() == "y" or next.lower() == "yes":
+        findMyHome()
+    else:
+        print "Then you should be OK"
+        print "Let me get you a cab"
+        print "Here is the cab"
+        print "Will leave you"
+        print "in the hands of the cab driver"
+        cab()
     
 
 
