@@ -1,9 +1,9 @@
-# working with exception handling 
+# working with exception handling
 
 f = None
 
 try:
-   f = open('films', 'r')
+   f = open('films.txt', 'r')
    for i in f:
       print i,
 except IOError:
