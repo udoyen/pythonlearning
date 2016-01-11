@@ -33,7 +33,7 @@ def main():  # (me):this reads a file line by line and splits each line at the "
     passFile = open('passwords.txt')		# Open the password file
     for line in passFile.readlines():  # Read through the file
         if ":" in line:
-            user = line.split(':')[0]  # assign any word found in user variable
+            user = line.split(':')[0]  # assign any word found to user variable
             # Prepare the user name etc, (me): assign the second value after
             # the split point ":"  to cryptPass
             cryptPass = line.split(':')[1].strip(' ')
