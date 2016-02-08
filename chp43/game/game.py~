@@ -1,0 +1,22 @@
+# Class structure from game concept
+"""
+Map
+- next_scene
+-opening_scene
+Engine
+- play
+Scene
+- enter
+  Death
+  Central Corridor
+  Laser Weapon Armory
+  The Bridge
+  Excape Pod
+
+"""
+
+# Actual class creation
+
+class Scene(object):
+    def enter(self):
+        pass
