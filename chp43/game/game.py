@@ -39,9 +39,9 @@ class Engine(object):
         
         while True:
             print "\n---------"
-            next_scene_name = current_scene.enter() # calls the enter function for each scene to get the next_sceene_name
+            next_scene_name = current_scene.enter() # calls the enter function for each scene to get the next_scene_name
             print "next_scene_name: %s " % next_scene_name
-            current_scene = self.scene_map.next_scene(next_scene_name) # This serve to change the current scene value
+            current_scene = self.scene_map.next_scene(next_scene_name) # This serves to change the current scene value
             print "second instance current_scene:  %s" %  current_scene
 
 
