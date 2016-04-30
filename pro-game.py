@@ -62,7 +62,7 @@ def iTrust():
     print "Good you trust me"
     print "Now follow me!"
     print "Lets get to my car"
-    print "Please put your belongins in the boot"
+    print "Please put your belongings in the boot"
     print "While I start the engine"
     print "Would you like to use the"
     print "rest room before we leave?"
@@ -121,7 +121,7 @@ def noCash():
     print "Watch or shoes?"
     next = raw_input("> ")
     if next.lower() == "watch" or next.lower() == "shoes":
-        print "Sorry dude we no free rides!"
+        print "Sorry dude no free rides!"
         getHome()
     else:
         noCash()
