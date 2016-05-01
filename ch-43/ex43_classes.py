@@ -14,11 +14,23 @@ class Engine(object):
         self.scene_map = scene_map
         
     def play(self):
+        """ 
+            object passed to engine class has its
+            opening_scene function called and returns the
+            name of the current scene and assigns this
+            class it to the variable current_scene
+        """
         current_scene = self.scene_map.opening_scene()
         
         while True:
             print "\n--------"
+            """ 
+                The enter function of the scene is called
+                which returns a new scene class and assigned as
+                the next scene
+            """
             next_scene_name = current_scene.enter()
+            
             current_scene = self.scene_map.next_scene(next_scene_name)
         
 class Death(Scene):
@@ -199,12 +211,28 @@ class Map(object):
         self.start_scene = start_scene
         
     def next_scene(self, scene_name):
+        """ This gets the current scene from the scenes array 
+            using a passed in array key and returns a particular
+            class 
+        """
         return Map.scenes.get(scene_name)
         
     def opening_scene(self):
+        """ next_scene function is called here
+        """
         return self.next_scene(self.start_scene)
         
         
 a_map = Map('central_corridor')
+
+print type(a_map)
+print a_map.start_scene
+
 a_game = Engine(a_map)
+
+print a_game.scene_map
+
 a_game.play()
+
+print type(a_game)
+
