@@ -1,13 +1,22 @@
 from sys import argv
 
 
-script, first_name, second_name, age, sex, nationality = argv
 
 
 
-print "The script is called:", raw_input(script)
-print "Your first name variable is:", raw_input(first_name)
-print "Your second name variable is:", raw_input(second_name)
-print "Your age is:", raw_input(age)
-print "Your sex is:", raw_input(sex)
-print "Your nationality is:", raw_input(nationality)
+
+print "The script is called:"
+script =  raw_input("> ")
+print "Your first name variable is:"
+first_name = raw_input("> ")
+print "Your second name variable is:"
+second_name = raw_input("> ")
+print "Your age is:"
+age = raw_input("> ")
+print "Your sex is:"
+sex = raw_input("> ")
+print "Your nationality is:"
+nationality = raw_input("> ")
+
+
+exec "script, first_name, second_name, age, sex, nationality = argv"
