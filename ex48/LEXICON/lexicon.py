@@ -18,7 +18,6 @@ class lexicon(object):
         self.verb = verb
         self.noun = noun
         self.number = number
-	self.type = type
 
 
     def scan(self, sentence):
