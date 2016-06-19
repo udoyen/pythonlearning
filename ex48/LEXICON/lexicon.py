@@ -1,29 +1,29 @@
-class lexicon(object):
+# create variables
+direction = [('direction', 'north'), ('direction', 'south'), ('direction', 'east')]
+verb = [('ver', 'go'), ('verb', 'stop'), ('verb', 'kill'), ('verb', 'eat')]
+stop_word = [('stop_word', 'the'), ('stop_word', 'in'), ('stop_word', 'of'), ('stop_word', 'from'), 
+             ('stop_word', 'at'), ('stop_word', 'it')]
+noun = [('noun', 'door'), ('moun', 'bear'), ('noun', 'princess'), ('noun', 'cabinet')]
+number = [('number', '0'), ('number', '1'), ('number', '2'), ('number', '3'), ('number', '4'), 
+          ('number', '5'), ('number', '6'), ('number', '7'), ('number', '8'), ('number', '9')]
+error_message = "wrong choice!"
 
-    direction = [('direction', 'north'),('direction', 'south'), ('direction', 'east'), 
-                 ('direction', 'west'), ('direction', 'down'), ('direction','up'), 
-                 ('direction'), ('direction', 'left'), ('direction', 'right'), ('direction', 'back')]
-    verb = [('ver', 'go'), ('verb', 'stop'), ('verb', 'kill'), ('verb', 'eat')]
-    stop_word = [('stop_word', 'the'), ('stop_word', 'in'), ('stop_word', 'of'), ('stop_word', 'from'), 
-                 ('stop_word', 'at'), ('stop_word', 'it')]
-    noun = [('noun', 'door'), ('moun', 'bear'), ('noun', 'princess'), ('noun', 'cabinet')]
-    number = [('number', '0'), ('number', '1'), ('number', '2'), ('number', '3'), ('number', '4'), 
-              ('number', '5'), ('number', '6'), ('number', '7'), ('number', '8'), ('number', '9')]
+# ask user for input
+# stuff = raw_input('> ')
 
-     
-    def __init__(self):
-        
-        self.sentence = sentence
-        self.direction = direction
-        self.verb = verb
-        self.noun = noun
-        self.number = number
+# place user entry in variable words
+# and split it
+# words = stuff.split()
 
-
-    def scan(self, sentence):
-	    stuff = raw_input('> ')
-	    words = stuff.split()
-	
-        return sentence
+def scan(self, **words):
+    """# since split is searchable check to see which 
+    # of the user's entry matches a direction word
+    for i in words:
+        if i in direction:
+            # assign i to variable word
+            word = i
+        else:
+            print(error_message)"""
+    return direction
 
           

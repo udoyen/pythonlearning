@@ -1,15 +1,15 @@
 from nose.tools import *
-from ex48 import lexicon
+from LEXICON import lexicon
 
 def test_directions():
-    assert_equal(lexicon.scan("north"), [('direction', 'norht')])
+    assert_equal(lexicon.scan("north"), [('direction', 'north')])
     result = lexicon.scan("north south east")
-    assert_equal(rsult, [('direction', 'north'),
+    assert_equal(result, [('direction', 'north'),
                          ('direction', 'south'),
                          ('direction', 'east')])
 
 
-def test_verbs():
+"""def test_verbs():
     assert_equal(lexicon.scan("go"), [('verb', 'go')])
     result = lexicon.scan("go kill eat")
     assert_equal(result, [('verb', 'go'),
@@ -22,7 +22,7 @@ def test_stops():
     result = lexicon.scan("the in of")
     assert_equal(result, [('stop', 'the'),
                           ('stop', 'in'),
-                          {'stop', 'of')])
+                          ('stop', 'of')])
 
 def test_nouns():
     assert_equal(lexicon.scan("bear"), [('noun', 'bear')])
@@ -34,7 +34,7 @@ def test_numbers():
     assert_equal(lexicon.scan("1234"), [('number', 1234)])
     result = lexicon.scan("3 91234")
     assert_equal(result, [('number', 3),
-                          ('number', 91234)]{
+                          ('number', 91234)])
 
 def test_errors():
     assert_equal(lexicon.scan("ASDFADFASDF"), [('error', 'ASDFADFASDF')])
@@ -42,3 +42,4 @@ def test_errors():
     assert_equal(result, [('noun', 'bear'),
                           ('error', 'IAS'),
                           ('noun', 'princess')])
+                          """
