@@ -1,11 +1,9 @@
 # create variables
-direction = [('direction', 'north'), ('direction', 'south'), ('direction', 'east')]
-verb = [('ver', 'go'), ('verb', 'stop'), ('verb', 'kill'), ('verb', 'eat')]
-stop_word = [('stop_word', 'the'), ('stop_word', 'in'), ('stop_word', 'of'), ('stop_word', 'from'), 
-             ('stop_word', 'at'), ('stop_word', 'it')]
-noun = [('noun', 'door'), ('moun', 'bear'), ('noun', 'princess'), ('noun', 'cabinet')]
-number = [('number', '0'), ('number', '1'), ('number', '2'), ('number', '3'), ('number', '4'), 
-          ('number', '5'), ('number', '6'), ('number', '7'), ('number', '8'), ('number', '9')]
+direction = ('north', 'south', 'east', 'west', 'down', 'up', 'left', 'right', 'back')
+verb = ('go', 'stop', 'kill', 'eat')
+stop = ('the', 'in', 'of','from','at', 'it')
+noun = ('door', 'bear', 'princess', 'cabinet')
+number = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
 error_message = "wrong choice!"
 
 # ask user for input
@@ -15,15 +13,7 @@ error_message = "wrong choice!"
 # and split it
 # words = stuff.split()
 
-def scan(self, **words):
-    """# since split is searchable check to see which 
-    # of the user's entry matches a direction word
-    for i in words:
-        if i in direction:
-            # assign i to variable word
-            word = i
-        else:
-            print(error_message)"""
-    return direction
-
+def scan(word, *words): # '*words' lets you give a variable number of arguments to a function
+    words = word.split()
+    return [('direction', w) for w in words if w in direction]
           
