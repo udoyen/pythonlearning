@@ -33,13 +33,13 @@ def test_nouns():
                           ('noun', 'princess')])
 
 
-"""def test_numbers():
+def test_numbers():
     assert_equal(lexicon.scan("1234"), [('number', 1234)])
     result = lexicon.scan("3 91234")
     assert_equal(result, [('number', 3),
                           ('number', 91234)])
 
-def test_errors():
+"""def test_errors():
     assert_equal(lexicon.scan("ASDFADFASDF"), [('error', 'ASDFADFASDF')])
     result = lexicon.scan("bear IAS princess")
     assert_equal(result, [('noun', 'bear'),
