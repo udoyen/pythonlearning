@@ -1,19 +1,22 @@
-# create variables
 direction = ('north', 'south', 'east', 'west', 'down', 'up', 'left', 'right', 'back')
 verb = ('go', 'stop', 'kill', 'eat')
-stop = ('the', 'in', 'of','from','at', 'it')
+stop = ('the', 'in', 'of', 'from', 'at', 'it')
 noun = ('door', 'bear', 'princess', 'cabinet')
 number = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
 error_message = "wrong choice!"
 
-# ask user for input
-# stuff = raw_input('> ')
+src = {'direction': direction,
+       'verb': verb,
+       'stop': stop,
+       'noun': noun,
+       'number': number}
 
-# place user entry in variable words
-# and split it
-# words = stuff.split()
 
-def scan(word, *words): # '*words' lets you give a variable number of arguments to a function
-    words = word.split()
-    return [('direction', w) for w in words if w in direction]
-          
+def scan(word, *words):
+    words = word.split() if not words else words
+    ret = []
+    for word in words:
+        for k, v in src.items():
+            if word in v:
+                ret.append((k, word))
+    return ret
